@@ -1,6 +1,6 @@
-node-starter
+FrontEndFriend
 ============
-
-A template setup for a NodeJS project. This repo contains the basic directory
-structure and files (server, Jade layout, Bower/NPM/Grunt configs) needed to start a
-simple node site.
+Trying to learn web development but don't know where to start on the frontend?
+FEF will help you discover new libraries and get your project started in minutes
+by creating custom NPM and Bower configurations including dependencies of your
+choosing.
