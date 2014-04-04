@@ -1,0 +1,31 @@
+{
+  "name": "MySite",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "express": "3.0.0alpha4",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*",
+    "bower": "~1.2.8",
+    "bower-installer": "~0.6.0",
+    "mongoose": "~3.8.8"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-cli": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-livereload": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-regarde": "latest",
+    "grunt-reload": "latest",
+    "grunt-newer": "~0.7.0",
+    "grunt-contrib-coffee": "~0.10.1",
+    "grunt-express-server": "~0.4.13"
+  },
+  "scripts": {
+    "postinstall": "bower install && bower-installer",
+    "start": "node app.js"
+  }
+}

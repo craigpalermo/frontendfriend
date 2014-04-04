@@ -1,0 +1,36 @@
+//- This file serves as the base that other templates will
+//- extend.
+
+doctype html
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  title #{title}
+
+  //- Stylesheets & Font imports
+  link(rel='stylesheet', href='/css/style.css')
+  link(rel='stylesheet', href='/vendor/bootstrap/bootstrap.css')
+
+  //- Google Analytics
+  script(src='/js/analytics.js')
+
+body
+  div.container
+    .row
+      div.col-lg-12
+        .header
+          h1 Header Goes Here
+    .main-content
+      block content
+
+  div.footer
+    div.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        //- Footer Content Goes Here
+
+scripts
+  script(src='/vendor/jquery/jquery.js')
+  script(src='/vendor/bootstrap/bootstrap.js')
+  script(src='/js/index.js')
