@@ -6,7 +6,8 @@
     "jquery": "~2.0.3",
     "bootstrap": "~3.0.3",
     "jquery-ui": "~1.10.3",
-    "moment": "~2.5.0"
+    "moment": "~2.5.0",
+    "vex": "~2.0.2"
   },
   "install": {
     "path": "src/public/vendor",
@@ -14,6 +15,11 @@
       "jquery-ui": [
         "bower_components/jquery-ui/ui/jquery-ui.js",
         "bower_components/jquery-ui/themes/base/jquery-ui.css"
+      ],
+      "vex": [
+        "bower_components/vex/js/vex.combined.min.js",
+        "bower_components/vex/css/vex.css",
+        "bower_components/vex/css/vex-theme-default.css"
       ]
     }
   }

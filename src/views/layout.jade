@@ -1,6 +1,3 @@
-//- This file serves as the base that other templates will
-//- extend.
-
 doctype html
 head
   meta(charset="utf-8")
@@ -12,9 +9,6 @@ head
   //- Stylesheets & Font imports
   link(rel='stylesheet', href='/css/style.css')
   link(rel='stylesheet', href='/vendor/bootstrap/bootstrap.css')
-
-  //- Google Analytics
-  script(src='/js/analytics.js')
 
 body
   div.container
@@ -34,3 +28,9 @@ scripts
   script(src='/vendor/jquery/jquery.js')
   script(src='/vendor/bootstrap/bootstrap.js')
   script(src='/js/index.js')
+
+  //- Vex imports
+  script(src='/vendor/vex/vex.combined.min.js')
+  link(rel='stylesheet', href='/vendor/vex/vex.css')
+  link(rel='stylesheet', href='/vendor/vex/vex-theme-default.css')
+  script vex.defaultOptions.className = 'vex-theme-default'

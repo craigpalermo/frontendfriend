@@ -1,4 +1,4 @@
-extend layout
+extends layout
 block content
   form(method='post', action='/', type='multipart/form-data')
     h2 Frameworks
@@ -39,4 +39,27 @@ block content
 
     .row
       div.col-md-12
-        input(type='submit' value='Launch!')
+        input#launch_button(type='button', value='Launch!')
+
+  .div#launch_box
+    .row
+      .div.col-md-12
+        h3 What next? 
+    .row
+      .div.col-md-12
+        h4 Step 1
+        p If you haven't already, install NPM. As root, run:
+        div.code 
+          | > apt-get install npm
+        h4 Step 2
+        p Move your new config files to your project's root directory:
+        div.code(style='white-space:pre;')
+          | > mv package.json /path/to/project
+          | > mv bower.json /path/to/project
+        h4 Step 3
+        p Install your packages! From your project's root directory, run:
+        div.code > npm install
+        p
+          | The packages you selected should now be located in the 'vendor'
+          | directory inside your project and are ready for you to include
+          | in your site!
