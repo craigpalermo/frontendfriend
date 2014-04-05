@@ -1,6 +1,42 @@
-//- This template extends the layout template and should contain
-//- this index page for the site.
-
 extend layout
 block content
-  //- Content Goes Here
+  form(method='post', action='/', type='multipart/form-data')
+    h2 Frameworks
+    .row
+      div.square.col-md-3
+        label(for='angular') Angular
+        input(type='checkbox', value='bower', name='deps[angular]')
+      div.square.col-md-3
+        label(for='backbone') Backbone
+        input(type='checkbox', value='bower', name='deps[backbone]')
+      div.square.col-md-3
+        label(for='ember') Ember
+        input(type='checkbox', value='bower', name='deps[ember]')
+
+    h2 Markdown
+    .row
+      div.square.col-md-3
+        label(for='jade') Jade
+        input(type='checkbox', value='npm', name='deps[jade]')
+      div.square.col-md-3
+        label(for='less') Less.js
+        input(type='checkbox', value='npm', name='deps[less]')
+
+    h2 Libraries
+    .row
+      div.square.col-md-3
+        label(for='bootstrap') Bootstrap
+        input(type='checkbox', value='bower', name='deps[bootstrap]')
+      div.square.col-md-3
+        label(for='jquery') jQuery
+        input(type='checkbox', value='bower', name='deps[jquery]')
+      div.square.col-md-3
+        label(for='fontawesome') Font Awesome
+        input(type='checkbox', value='bower', name='deps[fontawesome]')
+      div.square.col-md-3
+        label(for='moment') Moment
+        input(type='checkbox', value='bower', name='deps[moment]')
+
+    .row
+      div.col-md-12
+        input(type='submit' value='Launch!')

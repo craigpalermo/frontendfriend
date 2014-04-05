@@ -20,7 +20,8 @@ module.exports = function(grunt) {
                 }
             },
             livereload: {
-                files: ['src/public/css/*',
+                files: ['src/styl/*',
+                        'src/public/css/*',
                         'src/public/js/*',
                         'src/views/*',
                        ],
