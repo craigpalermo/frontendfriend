@@ -47,9 +47,9 @@ toggleSquareBackground = ->
     $(this).children(':checkbox').each ->
         $(this).prop("checked", !$(this).prop("checked"))
         if $(this).is(":checked")
-            $(this).parent().css("background-color", '#efeae8')
+            $(this).parent().toggleClass("inner_square selected_square")
         else
-            $(this).parent().css("background-color", '#b2b2b2')
+            $(this).parent().toggleClass("selected_square inner_square")
 
 jQuery ($) ->
     $("#launch_button").on 'click', openLaunchBox
