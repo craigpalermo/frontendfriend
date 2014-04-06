@@ -21,6 +21,7 @@ app.use(express.urlencoded())
 app.use(express.json())
 app.use(express.bodyParser())
 
+# base configuration used for npm and bower
 baseConfig = {
                 "name": "MySite",
                 "version": "0.0.1",
@@ -43,13 +44,7 @@ genBower = (req, res) ->
     json = addDepsToJson(deps, JSON.parse(JSON.stringify(baseConfig)))
     json['install'] =
         {
-            "path": "src/public/vendor",
-            "sources": {
-                "jquery-ui": [
-                    "bower_components/jquery-ui/ui/jquery-ui.js",
-                    "bower_components/jquery-ui/themes/base/jquery-ui.css"
-                ]
-            }
+            "path": "src/public/vendor"
         }
     res.json(json)
 
@@ -65,7 +60,6 @@ genNPM = (req, res) ->
 
 # Routes
 app.get('/', homeGet)
-app.post('/', genBower)
 app.post('/generate_bower', genBower)
 app.post('/generate_npm', genNPM)
 

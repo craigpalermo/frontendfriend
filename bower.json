@@ -18,8 +18,7 @@
       ],
       "vex": [
         "bower_components/vex/js/vex.combined.min.js",
-        "bower_components/vex/css/vex.css",
-        "bower_components/vex/css/vex-theme-default.css"
+        "bower_components/vex/css/*"
       ]
     }
   }

@@ -14,8 +14,7 @@ body
   div.container
     .row
       div.col-lg-12
-        .header
-          h1 Front-End Friend
+        h1#header Front-End Friend
     .main-content
       block content
 
@@ -32,8 +31,8 @@ scripts
   //- Vex imports
   script(src='/vendor/vex/vex.combined.min.js')
   link(rel='stylesheet', href='/vendor/vex/vex.css')
-  link(rel='stylesheet', href='/vendor/vex/vex-theme-default.css')
-  script vex.defaultOptions.className = "vex-theme-default"
+  link(rel='stylesheet', href='/vendor/vex/vex-theme-top.css')
+  script vex.defaultOptions.className = "vex-theme-top"
 
   //- highlight.js
   link(rel="stylesheet", href="http://yandex.st/highlightjs/8.0/styles/default.min.css")

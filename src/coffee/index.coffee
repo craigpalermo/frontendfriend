@@ -2,7 +2,7 @@ openLaunchBox = ->
     vex.dialog.open
         message: $("#launch_box").html(),
         showCloseButton: true,
-        contentCSS: { width: '50%' },
+        contentCSS: { width: '55%' },
         buttons: [
             $.extend({},
                 vex.dialog.buttons.NO,
@@ -38,10 +38,19 @@ submitForm = (url) ->
                 message: ("<pre><code>" +
                            JSON.stringify(data, null, 4) +
                            "</code></pre>")
-                showCloseButton: true,
-                contentCSS: { width: '45%' },
+                contentCSS: { width: '50%' },
             $('pre code').each (i, e) -> hljs.highlightBlock(e)
     })
 
+toggleSquareBackground = ->
+    $square = $(this)
+    $(this).children(':checkbox').each ->
+        $(this).prop("checked", !$(this).prop("checked"))
+        if $(this).is(":checked")
+            $(this).parent().css("background-color", '#efeae8')
+        else
+            $(this).parent().css("background-color", '#b2b2b2')
+
 jQuery ($) ->
     $("#launch_button").on 'click', openLaunchBox
+    $(".inner_square").on 'click', toggleSquareBackground

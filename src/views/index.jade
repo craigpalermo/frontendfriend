@@ -4,42 +4,51 @@ block content
     h2 Frameworks
     .row
       div.square.col-md-3
-        label(for='angular') Angular
-        input(type='checkbox', value='bower', name='deps[angular]')
+        div.inner_square
+          label(for='angular') Angular
+          input(type='checkbox', value='bower', name='deps[angular]')
       div.square.col-md-3
-        label(for='backbone') Backbone
-        input(type='checkbox', value='bower', name='deps[backbone]')
+        div.inner_square
+          label(for='backbone') Backbone
+          input(type='checkbox', value='bower', name='deps[backbone]')
       div.square.col-md-3
-        label(for='ember') Ember
-        input(type='checkbox', value='bower', name='deps[ember]')
+        div.inner_square
+          label(for='ember') Ember
+          input(type='checkbox', value='bower', name='deps[ember]')
 
     h2 Markdown
     .row
       div.square.col-md-3
-        label(for='jade') Jade
-        input(type='checkbox', value='npm', name='deps[jade]')
+        div.inner_square
+          label(for='jade') Jade
+          input(type='checkbox', value='npm', name='deps[jade]')
       div.square.col-md-3
-        label(for='less') Less.js
-        input(type='checkbox', value='npm', name='deps[less]')
+        div.inner_square
+          label(for='less') Less.js
+          input(type='checkbox', value='npm', name='deps[less]')
 
     h2 Libraries
     .row
       div.square.col-md-3
-        label(for='bootstrap') Bootstrap
-        input(type='checkbox', value='bower', name='deps[bootstrap]')
+        div.inner_square
+          label(for='bootstrap') Bootstrap
+          input(type='checkbox', value='bower', name='deps[bootstrap]')
       div.square.col-md-3
-        label(for='jquery') jQuery
-        input(type='checkbox', value='bower', name='deps[jquery]')
+        div.inner_square
+          label(for='jquery') jQuery
+          input(type='checkbox', value='bower', name='deps[jquery]')
       div.square.col-md-3
-        label(for='fontawesome') Font Awesome
-        input(type='checkbox', value='bower', name='deps[fontawesome]')
+        div.inner_square
+          label(for='fontawesome') Font Awesome
+          input(type='checkbox', value='bower', name='deps[fontawesome]')
       div.square.col-md-3
-        label(for='moment') Moment
-        input(type='checkbox', value='bower', name='deps[moment]')
+        div.inner_square
+          label(for='moment') Moment
+          input(type='checkbox', value='bower', name='deps[moment]')
 
     .row
-      div.col-md-12
-        input#launch_button(type='button', value='Launch!')
+      div.col-md-12#launch_botton_parent
+        div#launch_button Launch!
 
   .div#launch_box
     .row
@@ -47,6 +56,13 @@ block content
         h3 What next? 
     .row
       .div.col-md-12
+        h4 Save Your Config Files
+        p 
+          | Copy and paste your Bower config into a file named 
+          | <strong>'bower.json'</strong>
+          | and your NPM config into a file named 
+          | <strong>'package.json'</strong>. Place these files in your
+          | project's root directory.
         h4 Step 1
         p If you haven't already, install NPM. As root, run:
         div.code 
