@@ -51,6 +51,10 @@ toggleSquareBackground = ->
         else
             $(this).parent().toggleClass("selected_square inner_square")
 
+openHelp = ->
+    vex.dialog.alert $("#help_content").html()
+
 jQuery ($) ->
     $("#launch_button").on 'click', openLaunchBox
     $(".inner_square").on 'click', toggleSquareBackground
+    $("#help").on 'click', openHelp
