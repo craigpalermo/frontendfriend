@@ -40,8 +40,7 @@ homeGet = (req, res) ->
 # bower generator
 genBower = (req, res) ->
     deps = (key for key,val of req.body.deps when val is 'bower')
-    console.dir(deps)
-    json = addDepsToJson(deps, baseConfig)
+    json = addDepsToJson(deps, JSON.parse(JSON.stringify(baseConfig)))
     json['install'] =
         {
             "path": "src/public/vendor",
@@ -57,8 +56,7 @@ genBower = (req, res) ->
 # npm generator
 genNPM = (req, res) ->
     deps = (key for key,val of req.body.deps when val is 'npm')
-    console.dir(deps)
-    json = addDepsToJson(deps, baseConfig)
+    json = addDepsToJson(deps, JSON.parse(JSON.stringify(baseConfig)))
     json['scripts'] =   {
                         "postinstall": "bower install && bower-installer",
                         "start": "node app.js"
