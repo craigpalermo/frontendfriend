@@ -1,0 +1,30 @@
+extends layout
+block content
+  .row
+    div.col-md-8
+      form(role='form' action='/add_package' method='post')
+        div.form-group
+          label(for='long_name') Long Name
+          input.form-control(type='text' name='long_name' placeholder='Enter long name')
+        div.form-group
+          label(for='package_name') Package Name
+          input.form-control(type='text' name='package_name' placeholder='Enter package name')
+        div.form-group
+          label(for='package_manager') Package Manager
+          select.form-control(name='package_manager')
+            option(value='npm') NPM
+            option(value='bower') Bower
+        div.form-group
+          label(for='description') Description
+          input.form-control(type='text' name='description' placeholder='Enter description')
+        div.form-group
+          label(for='image_path') Image Path
+          input.form-control(type='text' name='image_path' placeholder='Enter path to thumbnail')
+        div.form-group
+          label(for='type') Package Type 
+          select.form-control(name='type')
+            option(value='framework') Framework
+            option(value='markdown') Markdown
+            option(value='library') Library
+
+        button.btn.btn-default(type='submit') Submit
