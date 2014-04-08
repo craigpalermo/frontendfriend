@@ -7,6 +7,7 @@ block content
         div.square.col-md-3
           div.inner_square(title="#{package.description}")
             img.thumb(src="#{package.image_path}")
+            br
             label(for="#{package.package_name}") #{package.long_name}
             input(type='checkbox', value="#{package.package_manager}", name="deps[#{package.package_name}]")
 
@@ -16,6 +17,7 @@ block content
         div.square.col-md-3
           div.inner_square(title="#{package.description}")
             img.thumb(src="#{package.image_path}")
+            br
             label(for="#{package.package_name}") #{package.long_name}
             input(type='checkbox', value="#{package.package_manager}", name="deps[#{package.package_name}]")
 
@@ -25,6 +27,7 @@ block content
         div.square.col-md-3
           div.inner_square(title="#{package.description}")
             img.thumb(src="#{package.image_path}")
+            br
             label(for="#{package.package_name}") #{package.long_name}
             input(type='checkbox', value="#{package.package_manager}", name="deps[#{package.package_name}]")
 
