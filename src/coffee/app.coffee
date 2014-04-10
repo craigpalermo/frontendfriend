@@ -11,15 +11,18 @@ app = module.exports = express()
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
-app.use(express.logger('dev'))
-app.use(stylus.middleware( {
-            src: __dirname + '/public',
-            compile: compile
-        } ))
-app.use(express.static(__dirname + '/public'))
-app.use(express.urlencoded())
-app.use(express.json())
-app.use(express.bodyParser())
+
+app.configure( ->
+    app.use(express.logger('dev'))
+    app.use(stylus.middleware( {
+                src: __dirname + '/public',
+                compile: compile
+            } ))
+    app.use(express.static(__dirname + '/public'))
+    app.use(express.urlencoded())
+    app.use(express.json())
+    app.use(express.bodyParser())
+)
 
 # base configuration used for npm and bower
 baseConfig = {
@@ -32,7 +35,7 @@ baseConfig = {
 # add dependencies to json
 addDepsToJson = (deps, json) ->
     json.dependencies[x] = "*" for x in deps
-    json
+    return json
 
 # bower generator
 genBower = (req, res) ->
@@ -61,7 +64,6 @@ mongoose.connect('mongodb://localhost/fef')
 db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', -> # callback for db open is below
-    # define the schema for packages
     packageSchema = mongoose.Schema({
         package_name: String,
         package_manager: String,
@@ -71,15 +73,7 @@ db.once('open', -> # callback for db open is below
         type: String
     })
 
-    # compile the schema into a model
     Package = mongoose.model('Package', packageSchema)
-
-    # retrieve framework packages from db
-    getPackagesOfType = (type) ->
-        Package.find({type: /^framework/ }, (err, packages) ->
-            if (err) then console.error(err)
-            packages
-        )
     
     # GET - home
     homeGet = (req, res) ->
@@ -103,13 +97,13 @@ db.once('open', -> # callback for db open is below
     # POST - add new package
     addPackagePost = (req, res) ->
         pac = new Package(  {
-                                    package_name: req.body.package_name,
-                                    package_manager: req.body.package_manager,
-                                    description: req.body.description,
-                                    long_name: req.body.long_name,
-                                    image_path: req.body.image_path,
-                                    type: req.body.type
-                                }
+                                package_name: req.body.package_name,
+                                package_manager: req.body.package_manager,
+                                description: req.body.description,
+                                long_name: req.body.long_name,
+                                image_path: req.body.image_path,
+                                type: req.body.type
+                            }
         )
         pac.save( (err, pac) ->
             if (err) then console.error(err)
