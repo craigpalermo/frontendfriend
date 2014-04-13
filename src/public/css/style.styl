@@ -1,6 +1,10 @@
 @import 'nib'
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
 // Color Variables
 darkOrange = #FF6D40
 lightOrange = #f7815c
@@ -76,7 +80,7 @@ h1, h2
     height 204px
     padding 15px
     background-color lightGray
-    border 4px solid midGray
+    border 4px solid lightOrange
 
 #package_form
     text-align center

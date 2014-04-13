@@ -1,35 +1,15 @@
 extends layout
 block content
-  form#package_form(method='post', action='/', type='multipart/form-data')
-    h2 Frameworks
-    .row
-      for package in frameworks
-        div.square.col-md-3
-          div.inner_square(title="#{package.description}")
-            img.thumb(src="#{package.image_path}")
+  form#package_form(method='post', action='/', type='multipart/form-data', ng-controller='ListCtrl' ng-cloak)
+    div(ng-repeat="type in ['Frameworks', 'Markdown', 'Libraries']")
+      h2 {{type}}
+      .row
+        div.square.col-md-3(ng-repeat="package in data[type]")
+          div.inner_square(title="{{package.description}}")
+            img.thumb(src="{{package.image_path}}")
             br
-            label(for="#{package.package_name}") #{package.long_name}
-            input(type='checkbox', value="#{package.package_manager}", name="deps[#{package.package_name}]")
-
-    h2 Markdown
-    .row
-      for package in markdowns
-        div.square.col-md-3
-          div.inner_square(title="#{package.description}")
-            img.thumb(src="#{package.image_path}")
-            br
-            label(for="#{package.package_name}") #{package.long_name}
-            input(type='checkbox', value="#{package.package_manager}", name="deps[#{package.package_name}]")
-
-    h2 Libraries
-    .row
-      for package in libraries
-        div.square.col-md-3
-          div.inner_square(title="#{package.description}")
-            img.thumb(src="#{package.image_path}")
-            br
-            label(for="#{package.package_name}") #{package.long_name}
-            input(type='checkbox', value="#{package.package_manager}", name="deps[#{package.package_name}]")
+            label(for="{{package.package_name}}") {{package.long_name}}
+            input(type='checkbox', value="{{package.package_manager}}", name="deps[{{package.package_name}}]")
 
     .row
       div.col-md-12#launch_botton_parent

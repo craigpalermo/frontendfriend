@@ -57,66 +57,13 @@ genNPM = (req, res) ->
                         }
     res.json(json)
 
-# set up mongoose connection
-mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/fef')
+homeGet = (req, res) ->
+    res.render('index', {})
 
-db = mongoose.connection
-db.on('error', console.error.bind(console, 'connection error:'))
-db.once('open', -> # callback for db open is below
-    packageSchema = mongoose.Schema({
-        package_name: String,
-        package_manager: String,
-        description: String,
-        long_name: String,
-        image_path: String,
-        type: String
-    })
+# Routes
+app.get('/', homeGet)
+app.post('/generate_bower', genBower)
+app.post('/generate_npm', genNPM)
 
-    Package = mongoose.model('Package', packageSchema)
-    
-    # GET - home
-    homeGet = (req, res) ->
-        Package.find({type: /^framework/ }, (err, frameworks) ->
-            Package.find({type: /^markdown/ }, (err, markdowns) ->
-                Package.find({type: /^library/ }, (err, libraries) ->
-                    res.render("index.jade", {
-                        title: "Home",
-                        frameworks: frameworks,
-                        markdowns: markdowns,
-                        libraries: libraries
-                    })
-                )
-            )
-        )
-
-    # GET - add new package
-    addPackageGet = (req, res) ->
-        res.render('add_package', {})
-
-    # POST - add new package
-    addPackagePost = (req, res) ->
-        pac = new Package(  {
-                                package_name: req.body.package_name,
-                                package_manager: req.body.package_manager,
-                                description: req.body.description,
-                                long_name: req.body.long_name,
-                                image_path: req.body.image_path,
-                                type: req.body.type
-                            }
-        )
-        pac.save( (err, pac) ->
-            if (err) then console.error(err)
-        )
-        res.render('add_package', {})
-
-    # Routes
-    app.get('/', homeGet)
-    app.get('/add_package', addPackageGet)
-    app.post('/generate_bower', genBower)
-    app.post('/generate_npm', genNPM)
-    app.post('/add_package', addPackagePost)
-
-    # listen server on port 3000
-    app.listen(3000)
-)
+# listen server on port 3000
+app.listen(3000)

@@ -38,8 +38,14 @@ module.exports = function(grunt) {
                 flatten: true,
                 cwd: "src/coffee/",
                 files: [
-                    {src: 'src/coffee/app.coffee', dest: 'src/app.js'},
-                    {src: 'src/coffee/index.coffee', dest: 'src/public/js/index.js'}
+                    {src: 'src/coffee/app.coffee',
+                     dest: 'src/app.js'},
+                    {src: 'src/coffee/index.coffee',
+                     dest: 'src/public/js/index.js'},
+                    {src: 'src/coffee/controllers.coffee',
+                     dest: 'src/public/js/controllers.js'},
+                    {src: 'src/coffee/ang-app.coffee',
+                     dest: 'src/public/js/ang-app.js'}
                 ],
                 ext: '.js'
             }

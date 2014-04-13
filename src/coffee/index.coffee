@@ -56,5 +56,5 @@ openHelp = ->
 
 jQuery ($) ->
     $("#launch_button").on 'click', openLaunchBox
-    $(".inner_square").on 'click', toggleSquareBackground
+    $(document).on 'click', '.inner_square, .selected_square', toggleSquareBackground
     $("#help").on 'click', openHelp

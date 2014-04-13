@@ -7,7 +7,9 @@
     "bootstrap": "~3.0.3",
     "jquery-ui": "~1.10.3",
     "moment": "~2.5.0",
-    "vex": "~2.0.2"
+    "vex": "~2.0.2",
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16"
   },
   "install": {
     "path": "src/public/vendor",
@@ -19,6 +21,9 @@
       "vex": [
         "bower_components/vex/js/vex.combined.min.js",
         "bower_components/vex/css/*"
+      ],
+      "angular-route": [
+        "bower_components/angular-route/angular-route.min.js"
       ]
     }
   }
