@@ -1,0 +1,85 @@
+{
+    "Frameworks": [
+        {
+            "long_name": "AngularJS",
+            "package_name": "angular",
+            "package_manager": "bower",
+            "image_path": "/img/angularjs.png",
+            "description": "HTML is great for declaring static documents, but it falters when we try to use it for declaring dynamic views in web-applications. AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop."
+        }, 
+        {
+            "long_name": "Backbone.js",
+            "package_name": "backbone",
+            "package_manager": "bower",
+            "image_path": "/img/backbone.png",
+            "description": "Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface."
+        },
+        {
+            "long_name": "Ember.js",
+            "package_name": "ember",
+            "package_manager": "bower",
+            "image_path": "/img/emberjs.png",
+            "description": "Ember.js is a JavaScript framework that does all of the heavy lifting that you'd normally have to do by hand. There are tasks that are common to every web app; Ember.js does those things for you, so you can focus on building killer features and UI."
+        }
+    ],
+    "Markdown": [
+        {
+            "long_name": "Jade",
+            "package_name": "jade",
+            "package_manager": "npm",
+            "image_path": "/img/jade.png",
+            "description": "A templating engine that allows you to write markup with the same structure as HTML, but with far less writing, resulting in cleaner and easier to maintain pages."
+        }, 
+        {
+            "long_name": "Less.js",
+            "package_name": "less",
+            "package_manager": "npm",
+            "image_path": "/img/less.png",
+            "description": "Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themable and extendable."
+        },
+        {
+            "long_name": "Stylus",
+            "package_name": "stylus",
+            "package_manager": "bower",
+            "image_path": "/img/stylus.png",
+            "description": "Stylus is a revolutionary new language, providing an efficient, dynamic, and expressive way to generate CSS. Supporting both an indented syntax and regular CSS style."
+        },
+        {
+            "long_name": "CoffeeScript",
+            "package_name": "coffee-script",
+            "package_manager": "npm",
+            "image_path": "/img/coffeescript.png",
+            "description": "CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart. CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way."
+        }
+    ],
+    "Libraries": [
+        {
+            "long_name": "Bootstrap",
+            "package_name": "bootstrap",
+            "package_manager": "bower",
+            "image_path": "/img/bootstrap.png",
+            "description": "Bootstrap is a free collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions."
+        },
+        {
+            "long_name": "jQuery",
+            "package_name": "jquery",
+            "package_manager": "bower",
+            "image_path": "/img/jquery.png",
+            "description": "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript."
+        },
+        {
+            "long_name": "Font Awesome",
+            "package_name": "fontawesome",
+            "package_manager": "bower",
+            "image_path": "/img/fontawesome.png",
+            "description": "Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS."
+        },
+        {
+            "long_name": "Moment.js",
+            "package_name": "moment",
+            "package_manager": "bower",
+            "image_path": "/img/moment.png",
+            "description": "A javascript date library for parsing, validating, manipulating, and formatting dates."
+        }
+    ]
+}
