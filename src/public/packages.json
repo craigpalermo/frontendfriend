@@ -80,6 +80,62 @@
             "package_manager": "bower",
             "image_path": "/img/moment.png",
             "description": "A javascript date library for parsing, validating, manipulating, and formatting dates."
+        },
+        {
+            "long_name": "jQuery File Upload",
+            "package_name": "jquery-file-upload",
+            "package_manager": "bower",
+            "image_path": "/img/jquery-file-upload.png",
+            "description": "File Upload widget with multiple file selection, drag&amp;drop support, progress bar, validation and preview images, audio and video for jQuery. Supports cross-domain, chunked and resumable file uploads. Works with any server-side platform (Google App Engine, PHP, Python, Ruby on Rails, Java, etc.) that supports standard HTML form file uploads."
+        },
+        {
+            "long_name": "normalize.css",
+            "package_name": "normalize.css",
+            "package_manager": "bower",
+            "image_path": "/img/normalize.png",
+            "description": "Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing."
+        },
+        {
+            "long_name": "jQuery UI",
+            "package_name": "jquery-ui",
+            "package_manager": "bower",
+            "image_path": "/img/jquery-ui.png",
+            "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice."
+        },
+        {
+            "long_name": "Chart.js",
+            "package_name": "chartjs",
+            "package_manager": "bower",
+            "image_path": "/img/chartjs.png",
+            "description": "Easy, object oriented client side graphs for designers and developers. Create 6 different kinds of charts and graphs, including: line, bar, radar, pie, polar area, and doughnut charts."
+        },
+        {
+            "long_name": "Flat UI",
+            "package_name": "flat-ui-official",
+            "package_manager": "bower",
+            "image_path": "/img/flatui.png",
+            "description": "Flat UI Free contains many basic and complex components which are great for designers to have at hand: buttons, inputs, button groups, selects, checkboxes and radio-buttons, tags, menus, progress bars and sliders, navigation elements and more."
+        },
+        {
+            "long_name": "spin.js",
+            "package_name": "spin.js",
+            "package_manager": "bower",
+            "image_path": "/img/spinjs.png",
+            "description": "An animated CSS3 loading spinner with VML fallback for IE."
+        },
+        {
+            "long_name": "Parsley",
+            "package_name": "parsleyjs",
+            "package_manager": "bower",
+            "image_path": "/img/parsley.png",
+            "description": "Validate your forms, frontend, without writing a single line of javascript!"
+        },
+        {
+            "long_name": "bootstrap-datepicker",
+            "package_name": "bootstrap-datepicker",
+            "package_manager": "bower",
+            "image_path": "/img/bootstrap-datepicker.png",
+            "description": "A datepicker for @twitter bootstrap forked from Stefan Petre's (of eyecon.ro), improvements by @eternicode."
         }
     ]
 }
